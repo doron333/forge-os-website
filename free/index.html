@@ -1,1 +1,53 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Agent Design Template | Forge OS</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+body{font-family:system-ui,sans-serif}
+.gradient-text{background:linear-gradient(135deg,#93c5fd,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+<nav class="border-b border-slate-800 px-5 h-16 flex items-center justify-between max-w-6xl mx-auto">
+<a href="/" class="font-bold text-lg">FORGE <span class="text-blue-400">OS</span></a>
+<a href="/#pricing" class="text-sm text-slate-400">Full product →</a>
+</nav>
+<section class="pt-16 pb-20 px-5">
+<div class="max-w-md mx-auto text-center">
+<div class="text-blue-400 text-xs font-semibold tracking-wide mb-4">FREE DOWNLOAD</div>
+<h1 class="text-3xl sm:text-4xl font-extrabold mb-4">Agent Design Template<br><span class="gradient-text">+ 6-Step Framework</span></h1>
+<p class="text-slate-400 mb-8">Enter your info, then download the PDF instantly.</p>
+<div id="form-box" class="bg-slate-900 border border-slate-800 rounded-2xl p-6 text-left">
+<form onsubmit="return unlock(event)">
+<label class="block text-sm text-slate-300 mb-1">First name</label>
+<input id="n" required class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 mb-3 text-slate-100" placeholder="Matt">
+<label class="block text-sm text-slate-300 mb-1">Email</label>
+<input id="e" type="email" required class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 mb-4 text-slate-100" placeholder="you@company.com">
+<button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 rounded-xl">Get the Free Template</button>
+<p class="text-xs text-slate-500 mt-3 text-center">No spam. PDF downloads right after.</p>
+</form>
+</div>
+<div id="dl" class="hidden bg-slate-900 border border-emerald-500/40 rounded-2xl p-6">
+<div class="text-emerald-400 text-sm font-semibold mb-2">You're in</div>
+<p class="font-bold text-lg mb-4">Your template is ready</p>
+<a href="https://forge-os-puce.vercel.app/free/template.html" class="inline-block w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3.5 rounded-xl mb-3">Open Template</a>
+<a href="/free/template.html" download="Forge-OS-Agent-Design-Template.html" class="inline-block w-full border border-slate-600 text-slate-200 font-semibold py-3 rounded-xl">Download HTML Template</a>
+<p class="text-xs text-slate-500 mt-3">Open the template, then use Share → Print → Save as PDF on your phone.</p>
+</div>
+</div>
+</section>
+<footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">© 2026 Forge OS</footer>
+<script>
+function unlock(e){
+  e.preventDefault();
+  if(!document.getElementById('n').value.trim()||!document.getElementById('e').value.trim()) return false;
+  document.getElementById('form-box').classList.add('hidden');
+  document.getElementById('dl').classList.remove('hidden');
+  return false;
+}
+</script>
+</body>
+</html>
