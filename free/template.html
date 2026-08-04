@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forge OS — Agent Design Template</title>
+<style>
+  @page { margin: 0.6in; }
+  body { font-family: Inter, system-ui, sans-serif; color: #0f172a; line-height: 1.5; max-width: 720px; margin: 0 auto; padding: 32px 20px; }
+  h1 { font-size: 22px; margin: 0 0 4px; }
+  h2 { font-size: 15px; color: #1e40af; margin: 22px 0 8px; border-bottom: 1px solid #e2e8f0; padding-bottom: 4px; }
+  .sub { color: #64748b; font-size: 13px; margin-bottom: 20px; }
+  .field { margin: 10px 0; }
+  .label { font-size: 12px; font-weight: 600; color: #334155; margin-bottom: 2px; }
+  .line { border-bottom: 1px solid #cbd5e1; min-height: 22px; margin-top: 2px; }
+  ul { margin: 6px 0; padding-left: 18px; font-size: 13px; }
+  li { margin: 3px 0; }
+  .box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 12px 14px; margin: 12px 0; font-size: 13px; }
+  .cta { margin-top: 28px; text-align: center; font-size: 12px; color: #64748b; }
+  .print-btn { position: fixed; top: 12px; right: 12px; background: #2563eb; color: white; border: none; padding: 10px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+  @media print { .print-btn { display: none; } }
+</style>
+</head>
+<body>
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+<h1>Forge OS — Agent Design Template</h1>
+<p class="sub">Free lead magnet · Fill this before you write a single system prompt</p>
+<h2>1. Why this exists</h2>
+<p style="font-size:13px">Most agents fail because they start as a clever prompt. Production agents start as a job design: clear outcome, constrained tools, memory rules, stop conditions, and a place in a real workflow.</p>
+<h2>2. Agent Design Sheet (fill this)</h2>
+<div class="field"><div class="label">Job / Outcome (one sentence, verifiable)</div><div class="line"></div></div>
+<div class="field"><div class="label">Owner (who improves it from real usage)</div><div class="line"></div></div>
+<div class="field"><div class="label">Inputs (required data + format)</div><div class="line"></div></div>
+<div class="field"><div class="label">Tools allowed (list only what is necessary)</div><div class="line"></div></div>
+<div class="field"><div class="label">Memory rules (what is stored, how long, what is excluded)</div><div class="line"></div></div>
+<div class="field"><div class="label">Output contract (exact format downstream needs)</div><div class="line"></div></div>
+<div class="field"><div class="label">Stop conditions (success / max steps / max cost / escalate)</div><div class="line"></div></div>
+<div class="field"><div class="label">Failure handling (retry / fallback / human gate)</div><div class="line"></div></div>
+<div class="field"><div class="label">Success metrics (how you know it works in production)</div><div class="line"></div></div>
+<h2>3. Six-step build path</h2>
+<ul>
+  <li><b>Step 1</b> — Define one verifiable outcome</li>
+  <li><b>Step 2</b> — Map the current human process</li>
+  <li><b>Step 3</b> — Choose architecture (default: single constrained agent)</li>
+  <li><b>Step 4</b> — Design role, tools, memory, output</li>
+  <li><b>Step 5</b> — Connect only required tools</li>
+  <li><b>Step 6</b> — Install, measure, iterate</li>
+</ul>
+<h2>4. Four layers (diagnose failures here)</h2>
+<div class="box">
+  <b>Prompt</b> — instructions for a single call<br>
+  <b>Context</b> — everything the model sees<br>
+  <b>Harness</b> — tools, retries, permissions, limits<br>
+  <b>Loop</b> — when to continue, stop, or escalate<br><br>
+  Prompt packs only touch the first layer. Most production failures live in the other three.
+</div>
+<h2>5. Failure modes to design against</h2>
+<ul>
+  <li>Context drift across long runs</li>
+  <li>Silent tool failures treated as success</li>
+  <li>Unbounded loops / cost blowups</li>
+  <li>Ghost actions (claims success without executing)</li>
+  <li>Cascading errors with no rollback</li>
+  <li>No observability</li>
+</ul>
+<p class="cta">Forge OS — forge-os-puce.vercel.app<br>Systems, not prompt packs</p>
+</body>
+</html>
