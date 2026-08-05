@@ -1,193 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Forge OS — Install Real AI Agents (Not Prompt Packs)</title>
-<meta name="description" content="Install your first real AI agent in 7 days. Full operating system for agents and business systems. Not a prompt pack.">
+<meta name="description" content="Forge OS: installed AI systems, Agent Factory, Content Operator, and private consulting. Not a prompt pack.">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-body{font-family:Inter,system-ui,sans-serif}
-.gradient-text{background:linear-gradient(135deg,#93c5fd,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.glow{box-shadow:0 0 48px rgba(59,130,246,.15)}
+body{font-family:system-ui,sans-serif}
+.g{background:linear-gradient(135deg,#93c5fd,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 </style>
-<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments);};</script>
-<script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased">
-<nav class="fixed top-0 inset-x-0 z-50 border-b border-slate-800/70 bg-slate-950/90 backdrop-blur-xl">
-<div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-<a href="/" class="flex items-center gap-3">
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Forge OS logo">
-<rect width="40" height="40" rx="10" fill="#0B1220" stroke="#3b82f6" stroke-width="1.5"/>
-<path d="M10 9h18c1.8 0 3.2 1.3 3.2 3.2v1.8H17.2v3.8h12.5v3.2H17.2V31H10V9z" fill="url(#forgeGrad)"/>
-<defs><linearGradient id="forgeGrad" x1="10" y1="9" x2="31" y2="31" gradientUnits="userSpaceOnUse">
-<stop stop-color="#93c5fd"/><stop offset="0.45" stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/>
-</linearGradient></defs>
-</svg>
-<span class="text-lg font-bold tracking-tight">FORGE <span class="text-blue-400">OS</span></span>
-</a>
-<div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
-<a href="#inside" class="hover:text-white transition">What's Inside</a>
-<a href="/free/" class="hover:text-white transition">Free Template</a>
-<a href="/starter/" class="hover:text-white transition">Agent Starter</a>
-<a href="/blog/" class="hover:text-white transition">Blog</a>
-<a href="#pricing" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition">Get Access</a>
-</div>
-</div>
+<body class="bg-slate-950 text-slate-100">
+<nav class="border-b border-slate-800 px-5 h-14 flex items-center justify-between max-w-5xl mx-auto">
+  <a href="/" class="font-bold flex items-center gap-2">
+    <svg width="28" height="28" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="9" fill="#0B1220" stroke="#3b82f6" stroke-width="1.5"/><path d="M10 9h18c1.8 0 3.2 1.3 3.2 3.2v1.8H17.2v3.8h12.5v3.2H17.2V31H10V9z" fill="#3b82f6"/></svg>
+    FORGE <span class="text-blue-400">OS</span>
+  </a>
+  <div class="flex items-center gap-4 text-sm">
+    <a href="/free/" class="text-slate-400 hover:text-white">Free</a>
+    <a href="/consulting.html" class="text-slate-400 hover:text-white hidden sm:inline">Consulting</a>
+    <a href="#pricing" class="bg-blue-600 text-white px-3 py-1.5 rounded-lg font-medium">Get Access</a>
+  </div>
 </nav>
-<section class="relative pt-28 pb-24 px-5 overflow-hidden">
-<div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(37,99,235,0.2),transparent)] pointer-events-none"></div>
-<div class="max-w-4xl mx-auto text-center relative">
-<div class="flex justify-center mb-8">
-<div class="p-2 rounded-2xl bg-gradient-to-br from-blue-500/40 to-blue-900/30 ring-2 ring-blue-500/30 glow">
-<svg width="88" height="88" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="40" height="40" rx="10" fill="#0B1220"/>
-<path d="M10 9h18c1.8 0 3.2 1.3 3.2 3.2v1.8H17.2v3.8h12.5v3.2H17.2V31H10V9z" fill="url(#heroG)"/>
-<defs><linearGradient id="heroG" x1="10" y1="9" x2="31" y2="31">
-<stop stop-color="#93c5fd"/><stop offset="0.45" stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/>
-</linearGradient></defs>
-</svg>
-</div>
-</div>
-<div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-semibold tracking-wide px-3.5 py-1.5 rounded-full mb-7">
-<span class="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-SYSTEMS — NOT PROMPT PACKS
-</div>
-<h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-[1.08] tracking-tight mb-6">
-Install your first real AI agent<br>
-<span class="gradient-text">in 7 days.</span>
-</h1>
-<p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-4 leading-relaxed">
-Stop collecting prompts. Get a complete operating system — agent architectures, business engines, and a private install session — so the work actually runs.
-</p>
-<p class="text-sm text-slate-500 mb-10">Start free · One agent $47 · Full OS $247</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a href="#pricing" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl text-lg transition shadow-lg shadow-blue-600/30">See Pricing</a>
-<a href="/free/" class="border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-8 py-4 rounded-xl text-lg transition">Get Free Design Template</a>
-</div>
-</div>
+<section class="px-5 pt-16 pb-12 text-center max-w-3xl mx-auto">
+  <div class="inline-block bg-blue-500/10 border border-blue-500/25 text-blue-400 text-xs font-semibold px-3 py-1.5 rounded-full mb-5">SYSTEMS, NOT PROMPT PACKS</div>
+  <h1 class="text-4xl sm:text-5xl font-extrabold mb-5 leading-tight">Stop collecting prompts.<br><span class="g">Install a real system.</span></h1>
+  <p class="text-slate-400 text-lg mb-8">Agent Factory, Content Operator, personal &amp; business systems, and private 1-on-1 installation.</p>
+  <div class="flex flex-col sm:flex-row gap-3 justify-center">
+    <a href="/free/" class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-3.5 rounded-xl">Get Free Template</a>
+    <a href="#pricing" class="border border-slate-600 text-slate-200 font-semibold px-8 py-3.5 rounded-xl">See Pricing</a>
+  </div>
 </section>
-<section class="border-y border-slate-800/60 py-5 bg-slate-900/30">
-<div class="max-w-6xl mx-auto px-5 flex flex-wrap justify-center gap-x-10 gap-y-2 text-sm text-slate-500">
-<span>Agent Factory curriculum</span><span class="hidden sm:inline text-slate-700">•</span>
-<span>Content Operator</span><span class="hidden sm:inline text-slate-700">•</span>
-<span>Notion Command Center</span><span class="hidden sm:inline text-slate-700">•</span>
-<span>Private 1-on-1 on Complete</span>
-</div>
+<section id="pricing" class="px-5 py-14 max-w-5xl mx-auto">
+  <h2 class="text-2xl font-bold text-center mb-8">Choose your access</h2>
+  <div class="grid md:grid-cols-3 gap-5">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col">
+      <div class="text-slate-400 text-sm">Personal</div>
+      <div class="text-3xl font-bold my-2">$97</div>
+      <ul class="text-sm text-slate-300 space-y-2 mb-6 flex-1">
+        <li>✓ Personal Mastery systems</li>
+        <li>✓ Deep Work protocols</li>
+        <li>✓ Notion Second Brain</li>
+      </ul>
+      <a href="https://buy.stripe.com/8x2eV70ri2ko5Ev7Yt6kg01" class="block text-center border border-slate-600 py-2.5 rounded-xl font-semibold">Get Personal</a>
+    </div>
+    <div class="bg-slate-900 border-2 border-blue-600 rounded-2xl p-6 flex flex-col relative">
+      <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-xs font-bold px-3 py-1 rounded-full">RECOMMENDED</div>
+      <div class="text-blue-400 text-sm">Complete</div>
+      <div class="text-3xl font-bold my-2">$247</div>
+      <ul class="text-sm text-slate-200 space-y-2 mb-6 flex-1">
+        <li>✓ Full Agent Factory</li>
+        <li>✓ Content Operator</li>
+        <li>✓ Private 1-on-1 consulting</li>
+        <li>✓ Notion Command Center</li>
+      </ul>
+      <a href="https://buy.stripe.com/00weV72zq1gkff53Id6kg02" class="block text-center bg-blue-600 py-2.5 rounded-xl font-semibold">Get Complete Access</a>
+    </div>
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col">
+      <div class="text-slate-400 text-sm">Agent Starter</div>
+      <div class="text-3xl font-bold my-2">$47</div>
+      <ul class="text-sm text-slate-300 space-y-2 mb-6 flex-1">
+        <li>✓ One practical agent blueprint</li>
+        <li>✓ Design template</li>
+        <li>✓ Install checklist</li>
+      </ul>
+      <a href="https://buy.stripe.com/8x2eV70ri2ko5Ev7Yt6kg01" class="block text-center border border-slate-600 py-2.5 rounded-xl font-semibold">Get Starter</a>
+    </div>
+  </div>
 </section>
-<section class="max-w-6xl mx-auto px-5 py-24">
-<div class="grid md:grid-cols-2 gap-14 items-center">
-<div>
-<h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">Prompt packs create activity.<br><span class="text-blue-400">Systems create leverage.</span></h2>
-<p class="text-slate-400 leading-relaxed mb-5">Most people optimize the prompt. Production failures live in context, tools, memory, and stop conditions — the layers prompt packs never touch.</p>
-<p class="text-slate-400 leading-relaxed">Forge OS is built so agents get <strong class="text-slate-200">installed</strong>, measured, and improved — not saved in a folder.</p>
-</div>
-<div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 space-y-5 glow">
-<div class="flex gap-4 items-start"><div class="w-9 h-9 rounded-lg bg-red-500/10 text-red-400 flex items-center justify-center font-bold text-sm shrink-0">✕</div><div><div class="font-medium">$17 app-resell kits & prompt dumps</div><div class="text-sm text-slate-500">Activity without architecture</div></div></div>
-<div class="flex gap-4 items-start"><div class="w-9 h-9 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center font-bold text-sm shrink-0">✓</div><div><div class="font-medium text-slate-100">Forge OS</div><div class="text-sm text-slate-400">Designed systems + install path + consulting</div></div></div>
-</div>
-</div>
+<section class="px-5 pb-14 max-w-2xl mx-auto text-center">
+  <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6">
+    <h3 class="font-bold mb-2">Complete includes a 1-on-1 call</h3>
+    <p class="text-slate-400 text-sm mb-4">Book after purchase:</p>
+    <a href="https://cal.com/forge-os/forge-os-1-on-1-installation-call" class="text-blue-400 font-medium">cal.com/forge-os →</a>
+  </div>
 </section>
-<section id="inside" class="bg-slate-900/40 border-y border-slate-800/60 py-24">
-<div class="max-w-6xl mx-auto px-5">
-<div class="text-center mb-16">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">What you actually get</h2>
-</div>
-<div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-<div class="bg-slate-950 border border-slate-800 rounded-2xl p-7"><div class="text-blue-400 font-semibold text-xs tracking-wider mb-3">STARTER · $47</div><h3 class="text-lg font-semibold mb-3">One Agent, Fully Specified</h3><p class="text-slate-400 text-sm">Blueprint, tool contracts, memory rules, 7-day install checklist.</p></div>
-<div class="bg-slate-950 border border-slate-800 rounded-2xl p-7"><div class="text-blue-400 font-semibold text-xs tracking-wider mb-3">AGENT FACTORY</div><h3 class="text-lg font-semibold mb-3">Full Build Curriculum</h3><p class="text-slate-400 text-sm">Architecture, failure modes, deployment path, evaluation.</p></div>
-<div class="bg-slate-950 border border-slate-800 rounded-2xl p-7"><div class="text-blue-400 font-semibold text-xs tracking-wider mb-3">CONTENT OPERATOR</div><h3 class="text-lg font-semibold mb-3">Automatic SEO System</h3><p class="text-slate-400 text-sm">Multi-stage agent that researches, writes, and optimizes content.</p></div>
-<div class="bg-slate-950 border border-slate-800 rounded-2xl p-7"><div class="text-blue-400 font-semibold text-xs tracking-wider mb-3">PERSONAL + BUSINESS</div><h3 class="text-lg font-semibold mb-3">Capacity & Engines</h3><p class="text-slate-400 text-sm">Deep work protocols and business systems built to be installed.</p></div>
-<div class="bg-slate-950 border border-slate-800 rounded-2xl p-7"><div class="text-blue-400 font-semibold text-xs tracking-wider mb-3">COMMAND CENTER</div><h3 class="text-lg font-semibold mb-3">Notion Second Brain</h3><p class="text-slate-400 text-sm">Databases and tracking so systems stay running.</p></div>
-<div class="bg-slate-950 border border-slate-800 rounded-2xl p-7"><div class="text-blue-400 font-semibold text-xs tracking-wider mb-3">COMPLETE ONLY</div><h3 class="text-lg font-semibold mb-3">Private 1-on-1 Install</h3><p class="text-slate-400 text-sm">Custom agent design with the builder.</p></div>
-</div>
-</div>
-</section>
-<section id="pricing" class="max-w-5xl mx-auto px-5 py-24">
-<div class="text-center mb-14">
-<h2 class="text-3xl md:text-4xl font-bold mb-4">Simple pricing</h2>
-<p class="text-slate-400 text-lg">Free template → one agent → full operating system.</p>
-</div>
-<div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-<div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-6 flex flex-col">
-<div class="text-sm text-slate-400 mb-1">Free</div>
-<div class="text-3xl font-bold mb-1">$0</div>
-<div class="text-sm text-slate-500 mb-5">Design template</div>
-<ul class="space-y-2 text-sm text-slate-300 mb-6 flex-1">
-<li class="flex gap-2"><span class="text-blue-400">✓</span> Agent Design Template</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> 6-step framework</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> Failure-mode checklist</li>
-</ul>
-<a href="/free/" class="block text-center border border-slate-700 py-3 rounded-xl font-semibold text-sm">Get Free Template</a>
-</div>
-<div class="bg-slate-900 border-2 border-blue-500/50 rounded-2xl p-6 flex flex-col relative">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-slate-800 text-blue-300 text-xs font-bold px-3 py-1 rounded-full border border-blue-500/40">FRONT END</div>
-<div class="text-sm text-blue-400 mb-1">Agent Starter</div>
-<div class="text-3xl font-bold mb-1">$47</div>
-<div class="text-sm text-slate-500 mb-5">One agent, installed</div>
-<ul class="space-y-2 text-sm text-slate-300 mb-6 flex-1">
-<li class="flex gap-2"><span class="text-blue-400">✓</span> Full agent blueprint</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> Tool + memory + loop specs</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> 7-day install checklist</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> $47 credit to Complete</li>
-</ul>
-<a href="https://buy.stripe.com/8x2eV70ri2ko5Ev7Yt6kg01" class="block text-center bg-blue-600/90 hover:bg-blue-500 py-3 rounded-xl font-semibold text-sm">Get Agent Starter</a>
-</div>
-<div class="bg-slate-900 border-2 border-blue-600 rounded-2xl p-6 flex flex-col relative shadow-xl shadow-blue-600/15 glow">
-<div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">BEST VALUE</div>
-<div class="text-sm text-blue-400 mb-1">Complete</div>
-<div class="text-3xl font-bold mb-1">$247</div>
-<div class="text-sm text-slate-500 mb-5">Full OS + consulting</div>
-<ul class="space-y-2 text-sm text-slate-200 mb-6 flex-1">
-<li class="flex gap-2"><span class="text-blue-400">✓</span> Everything in Starter</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> Full Agent Factory</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> Content Operator</li>
-<li class="flex gap-2"><span class="text-blue-400">✓</span> <strong>Private 1-on-1 install</strong></li>
-</ul>
-<a href="https://buy.stripe.com/00weV72zq1gkff53Id6kg02" class="block text-center bg-blue-600 hover:bg-blue-500 py-3 rounded-xl font-semibold text-sm">Get Complete Access</a>
-</div>
-</div>
-<p class="text-center text-sm text-slate-500 mt-8">Agent Starter $47 is credited toward Complete if you upgrade within 14 days. <a href="/refund.html" class="text-slate-400 underline">Refund policy</a></p>
-</section>
-<section class="max-w-3xl mx-auto px-5 pb-24">
-<h2 class="text-3xl font-bold text-center mb-12">FAQ</h2>
-<div class="space-y-8">
-<div><h4 class="font-semibold text-lg mb-2">Is this like those $17 AI app kits?</h4><p class="text-slate-400 text-sm"><strong class="text-slate-200">No.</strong> Those sell resell scripts and demos. Forge OS installs real agent systems — architecture, memory, tools, failure modes, and a path into your workflow.</p></div>
-<div><h4 class="font-semibold text-lg mb-2">What's the $47 Agent Starter?</h4><p class="text-slate-400 text-sm">One complete agent blueprint with tool contracts, memory rules, stop conditions, and a 7-day install checklist.</p></div>
-<div><h4 class="font-semibold text-lg mb-2">Who is consulting with?</h4><p class="text-slate-400 text-sm">Matt Doron, builder of Forge OS. <a href="/consulting.html" class="text-blue-400 hover:underline">See background →</a></p></div>
-</div>
-</section>
-<section class="border-t border-slate-800 bg-slate-900/50">
-<div class="max-w-4xl mx-auto px-5 py-20 text-center">
-<div class="flex justify-center mb-6">
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="#0B1220" stroke="#3b82f6" stroke-width="1.5"/><path d="M10 9h18c1.8 0 3.2 1.3 3.2 3.2v1.8H17.2v3.8h12.5v3.2H17.2V31H10V9z" fill="#3b82f6"/></svg>
-</div>
-<h2 class="text-3xl md:text-4xl font-bold mb-5">Install a real system this week.</h2>
-<p class="text-slate-400 mb-10 max-w-xl mx-auto text-lg">Free template today. One agent for $47. Full OS when you're ready.</p>
-<div class="flex flex-col sm:flex-row gap-4 justify-center">
-<a href="https://buy.stripe.com/8x2eV70ri2ko5Ev7Yt6kg01" class="inline-block bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl text-lg transition">Get Agent Starter — $47</a>
-<a href="https://buy.stripe.com/00weV72zq1gkff53Id6kg02" class="inline-block border border-slate-700 hover:border-slate-500 text-slate-200 font-semibold px-8 py-4 rounded-xl text-lg transition">Get Complete — $247</a>
-</div>
-</div>
-</section>
-<footer class="border-t border-slate-800">
-<div class="max-w-6xl mx-auto px-5 py-10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
-<div class="flex items-center gap-3">
-<svg width="32" height="32" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="#0B1220" stroke="#3b82f6"/><path d="M10 9h18c1.8 0 3.2 1.3 3.2 3.2v1.8H17.2v3.8h12.5v3.2H17.2V31H10V9z" fill="#3b82f6"/></svg>
-<span class="font-semibold text-slate-300">FORGE OS</span><span>© 2026</span>
-</div>
-<div class="flex flex-wrap justify-center gap-6">
-<a href="/free/" class="hover:text-slate-300">Free</a>
-<a href="/starter/" class="hover:text-slate-300">Starter</a>
-<a href="/blog/" class="hover:text-slate-300">Blog</a>
-<a href="/consulting.html" class="hover:text-slate-300">Consulting</a>
-<a href="/privacy.html" class="hover:text-slate-300">Privacy</a>
-<a href="/terms.html" class="hover:text-slate-300">Terms</a>
-<a href="/refund.html" class="hover:text-slate-300">Refunds</a>
-</div>
-</div>
+<footer class="border-t border-slate-800 py-6 text-center text-sm text-slate-500">
+  © 2026 Forge OS · <a href="/free/" class="text-blue-400">Free Template</a> · <a href="/consulting.html">Consulting</a>
 </footer>
 </body>
 </html>
